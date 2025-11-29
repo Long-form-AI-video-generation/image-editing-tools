@@ -19,7 +19,7 @@ I discovered that the repository provides several **example workflows** in the `
 -   `example_flow_edit.json`
 -   `example_flux_regional.json`
 
-**Note:** I put the example workflows in the `06-Workflow-Examples/Fluxtapoz` folder to make it easier to find them.
+**Note:** I put the example workflows in the `examples-workflow/Fluxtapoz` folder to make it easier to find them.
 
 I recommend loading these JSON files directly into ComfyUI to understand how to connect the nodes.
 
