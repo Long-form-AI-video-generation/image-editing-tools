@@ -1,0 +1,93 @@
+# Workflow metadata mapping
+# Format: original_filename -> {tool, purpose, version}
+
+workflows:
+  # Fluxtapoz workflows
+  example_flux_regional.json:
+    tool: Fluxtapoz
+    purpose: regional-editing
+    version: "1.0"
+  
+  example_rf_edit_workflow.json:
+    tool: Fluxtapoz
+    purpose: rf-editing
+    version: "1.0"
+  
+  example_flow_edit.json:
+    tool: Fluxtapoz
+    purpose: flow-editing
+    version: "1.0"
+  
+  example_rf_inversion_updated.json:
+    tool: Fluxtapoz
+    purpose: rf-inversion
+    version: "1.0"
+  
+  example_rf_inversion_stylization.json:
+    tool: Fluxtapoz
+    purpose: rf-stylization
+    version: "1.0"
+  
+  example_rf_fireflow.json:
+    tool: Fluxtapoz
+    purpose: fireflow
+    version: "1.0"
+  
+  example_rf_edit_workflow_alternative.json:
+    tool: Fluxtapoz
+    purpose: rf-editing-alt
+    version: "1.0"
+  
+  example_unsample_inject_workflow.json:
+    tool: Fluxtapoz
+    purpose: unsample-inject
+    version: "1.0"
+  
+  # ICEdit workflows
+  ICEF_workflow.json:
+    tool: ICEdit
+    purpose: basic-editing
+    version: "1.0"
+  
+  ICEF_with_no_upscale_workflow.json:
+    tool: ICEdit
+    purpose: no-upscale
+    version: "1.0"
+  
+  # Step1X-Edit workflows
+  step1x_edit.json:
+    tool: Step1X-Edit
+    purpose: basic-editing
+    version: "1.0"
+  
+  step1x_edit_teacache.json:
+    tool: Step1X-Edit
+    purpose: teacache
+    version: "1.0"
+  
+  # SeqImageLoader workflows
+  cat2dog_with_animatediff.json:
+    tool: SeqImageLoader
+    purpose: animatediff
+    version: "1.0"
+  
+  wan_video_wrapper.json:
+    tool: SeqImageLoader
+    purpose: video-wrapper
+    version: "1.0"
+  
+  faceswap_masking_helper.json:
+    tool: SeqImageLoader
+    purpose: faceswap-masking
+    version: "1.0"
+  
+  # ImageMagick workflows
+  example-workflow1.json:
+    tool: ImageMagick
+    purpose: basic-transform
+    version: "1.0"
+  
+  example-workflow2.json:
+    tool: ImageMagick
+    purpose: advanced-transform
+    version: "1.0"
