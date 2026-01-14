@@ -2,30 +2,39 @@
 
 Based on my analysis of image editing capacity and ComfyUI compatibility, I have selected the following three tools as the top recommendations.
 
-## 1. Step1X-Edit
+## 1. Qwen-Image-Edit
+**Best for: Semantic Identity Preservation, Style Transfer & Precise Text Editing**
+
+selected **Qwen-Image-Edit** as the top recommendation because its dual-input architecture gives it a uniquely powerful combination of semantic understanding and appearance control that no other tool in this list matches out of the box.
+
+*   **Reason:**
+    *   **Capacity:** Its dual-pathway design — feeding the input image simultaneously into Qwen2.5-VL (for semantic control) and a VAE Encoder (for appearance control) — enables both high-level semantic edits (style transfer, IP/character creation, novel view synthesis, object rotation) and precise localized appearance edits (adding, removing, or modifying specific elements) within a single model. It also has best-in-class bilingual (Chinese/English) text editing, capable of correcting individual characters through chained multi-step passes.
+    *   **ComfyUI Compatibility:** It is natively supported in ComfyUI via Comfy-Org's official model packaging, requiring no third-party custom nodes. FP8-quantized model files are provided, and an optional Lightning LoRA enables 4-step fast inference for rapid iteration.
+    *   **Feasibility:** Its instruction-following, inversion-free approach means there is no inversion pipeline to tune or fail. For anime and character-centric workflows in particular, its explicit focus on IP creation and character consistency — significantly improved in the 2511 iteration — makes it the most directly applicable tool for maintaining subject identity across scene variations.
+## 2. Step1X-Edit
 **Best for: High-Fidelity, Complex Instruction-Based Editing**
 
-I selected **Step1X-Edit** because it represents a "heavyweight" champion in instruction-driven editing. By combining a Multimodal Large Language Model (MLLM) with a diffusion decoder, it achieves a level of understanding and precision that rivals proprietary models.
+selected **Step1X-Edit** because it represents a "heavyweight" champion in instruction-driven editing. By combining a Multimodal Large Language Model (MLLM) with a diffusion decoder, it achieves a level of understanding and precision that rivals proprietary models.
 
 *   **Reason:**
     *   **Capacity:** It handles complex, free-form natural language instructions and preserves identity exceptionally well during multi-turn edits. It supports fine-grained regional control, making it suitable for professional-grade tasks like character retouching and material transformation.
     *   **ComfyUI Compatibility:** Despite its size (19B parameters), it is fully integrated into ComfyUI via a custom node extension. It supports FP8 quantization and offloading, making it usable even on consumer hardware, and includes features like TeaCache for faster inference.
     *   **Feasibility:** Its "all-in-one" architecture simplifies workflows. Instead of chaining multiple specialized nodes (one for face, one for background, one for style), Step1X-Edit can often handle the entire transformation in a single pass, reducing workflow complexity and potential points of failure.
 
-## 2. ICEdit
+## 3. ICEdit
 **Best for: Efficient, Multi-Turn Editing & Style Transfer**
 
-I selected **ICEdit** as a highly efficient alternative that doesn't compromise on quality. Its LoRA-centric design makes it lightweight and fast, perfect for iterative workflows.
+selected **ICEdit** as a highly efficient alternative that doesn't compromise on quality. Its LoRA-centric design makes it lightweight and fast, perfect for iterative workflows.
 
 *   **Reason:**
     *   **Capacity:** It excels at "in-context" editing, allowing for consistent multi-turn modifications. It is particularly strong at color adjustments, attribute changes, and style transfers while maintaining the subject's identity. Its use of Mixture-of-Experts (MoE) allows for specialized handling of complex prompts without massive computational overhead.
     *   **ComfyUI Compatibility:** It has an official ComfyUI workflow and is registered in the Comfy Registry. The integration is smooth, allowing for reproducible pipelines where you can easily swap inputs and adjust LoRA strengths for precise control.
     *   **Feasibility:** Its lightweight nature makes it ideal for *iterative* design. You can rapidly generate multiple variations of an edit (e.g., trying 10 different hair colors) in the time it takes a larger model to run once. This feedback loop is crucial for creative exploration.
 
-## 3. Fluxtapoz
+## 4. Fluxtapoz
 **Best for: Advanced Flux-Based Inversion & Editing**
 
-I selected **Fluxtapoz** for users who want to leverage the power of the **Flux** model specifically. It provides a suite of advanced techniques that are often missing from standard implementations.
+selected **Fluxtapoz** for users who want to leverage the power of the **Flux** model specifically. It provides a suite of advanced techniques that are often missing from standard implementations.
 
 *   **Reason:**
     *   **Capacity:** It brings cutting-edge research like **RF-Inversion**, **FireFlow**, and **FlowEdit** directly to users. This allows for high-quality "unsampling" (preparing an image for editing) and text-based editing without needing complex masks. It also includes regional prompting and enhancement nodes (PAG/SEG) for superior detail control.
